@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+body {
+    margin-left: 60px;
+    font-family: 'ABeeZee';
+    /*font-size: 50px;*/
+    margin-right: 150px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    /*font-size: 100px;*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading {
+    margin-top: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.intro {
+    margin-top: 17px;
+    width: 500px;
+    text-align: justify;
+    color: grey;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+    margin-top: 30px;
+    /* font-size: 65px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    margin-top: 17px;
+}
+
+input[type=text] {
+    width: 166px;
+    height: 25px;
+    /*font-size: 50px; */
+    background-color: #707070;
+    color: white;
+}
+
+input[type=checkbox] {
+    background-color: grey;
+    color: white;
+    margin-right: 10px;
+}
+
+input[type=submit] {
+    width: 150px;
+    padding: 6px;
+    margin-top: 20px;
+    /*font-size: 65px;*/
+    color: white;
+    background-color: #707070;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: grey;
+}
+
+.generatingPassword {
+    margin-top: 83px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.NewPassword {
+    background-color: #707070;
+    display: block;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 5%;
+}
+
+.footer {
+    text-align: right;
+    color: grey;
+}
+
+button {
+    display: block;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #707070;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: grey;
+    border: 1px solid white;
 }
