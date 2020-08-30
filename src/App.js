@@ -7,9 +7,9 @@ class App extends React.Component {
         super();
         this.state = {
             num: 0,
-            isDigit: true,
-            isSymbol: true,
-            isCapital: true,
+            isDigit: false,
+            isSymbol: false,
+            isCapital: false,
             isDone: false,
             pwdGen: ''
         };
@@ -43,8 +43,12 @@ class App extends React.Component {
           this.setState({isDone:true});
         }
       }
-      if(this.state.isDone==true)    
+      if(this.state.isDone==true){    
         generatedPwd = this.generatePassword();
+        document.getElementById('headingAfter').style.visibility = "visible";
+        document.getElementById('aftersubmit').style.visibility = "visible";
+        document.getElementById('aftersubmit1').style.visibility = "visible";
+      }
       console.log('Gener' + generatedPwd);
       this.setState({
         pwdGen : generatedPwd
@@ -139,7 +143,7 @@ class App extends React.Component {
               <input type="submit" value="Submit" className="submit" onClick={newP = this.handleSubmit}/> 
 
             </form>
-        <h1 className = "generatingPassword"> Generated Password </h1> <br/>
+        <h1 className = "generatingPassword" id = "headingAfter" style={{"visibility": "hidden"}}> Generated Password </h1> <br/>
         
         <h1 className = "NewPassword" id="aftersubmit" style={{"visibility":"hidden"}}> {this.state.pwdGen} </h1>
         <button id="aftersubmit1" style={{"visibility":"hidden"}} onClick={this.copyToClipboard(this.state.pwdGen)}> Copy </button>
